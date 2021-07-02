@@ -10,4 +10,6 @@ using namespace std;
 
 vector<char>nano_encrypt(vector<char> source);
 
+vector<char>nano_decrypt(vector<char> source, int val);
+
 #endif //CRYPTOCYPHER_NANO_CYPHER_H
