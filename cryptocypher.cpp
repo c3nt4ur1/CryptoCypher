@@ -35,6 +35,8 @@ void CryptoCypher::on_pb_encrypt_clicked()
     vector<char> output;
     if(ui->rb_cesar->isChecked()){
         output = cesar_encrypt(source);
+    }else if(ui->rb_nano->isChecked()){
+        output = nano_encrypt(source);
     }
 
     QString qsOutput;
