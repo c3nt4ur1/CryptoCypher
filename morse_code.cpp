@@ -1,92 +1,36 @@
-#include<iostream>
 #include "morse_code.h"
 
-using namespace std;
+string char_to_morse(char c){
+    char alphabet[72] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+    'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
+    'W', 'X', 'Y', 'Z', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', '?', '!', '+', '-', '=', '/', '(', ')'};
 
-string string_to_morse(string source){
+    string morse[72] = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.",
+    "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..", ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....",
+    "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..",
+    "/", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----", ".-.-.-", "..--..", "-.-.--",
+     ".-.-.", "-....-", "-...-", "-....-", "-.--.", "-.--.-"};
 
-    string target;
-    for(int i = 0; i < (int)source.length(); i++){
-
-        switch (source[i]){
-            case 'a':
-                target +=  ".-";
-            case 'b':
-                target +=  "-...";
-            case 'c':
-                target +=  "-.-.";
-            case 'd':
-                target +=  "-..";
-            case 'e':
-                target +=  ".";
-            case 'f':
-                target +=  "..-.";
-            case 'g':
-                target +=  "--.";
-            case 'h':
-                target +=  "....";
-            case 'i':
-                target +=  "..";
-            case 'j':
-                target +=  ".---";
-            case 'k':
-                target +=  "-.-";
-            case 'l':
-                target +=  ".-..";
-            case 'm':
-                target +=  "--";
-            case 'n':
-                target +=  "-.";
-            case 'o':
-                target +=  "---";
-            case 'p':
-                target +=  ".--.";
-            case 'q':
-                target +=  "--.-";
-            case 'r':
-                target +=  ".-.";
-            case 's':
-                target +=  "...";
-            case 't':
-                target +=  "-";
-            case 'u':
-                target +=  "..-";
-            case 'v':
-                target +=  "...-";
-            case 'w':
-                target +=  ".--";
-            case 'x':
-                target +=  "-..-";
-            case 'y':
-                target +=  "-.--";
-            case 'z':
-                target +=  "--..";
-            case '1':
-                target +=  ".----";
-            case '2':
-                target +=  "..---";
-            case '3':
-                target +=  "...--";
-            case '4':
-                target +=  "....-";
-            case '5':
-                target +=  ".....";
-            case '6':
-                target +=  "-....";
-            case '7':
-                target +=  "--...";
-            case '8':
-                target +=  "---..";
-            case '9':
-                target +=  "----.";
-            case '0':
-                target +=  "-----";
-
+    for(int i = 0; i < 63; i++){
+        if(c == alphabet[i]){
+            return morse[i];
         }
     }
-    return target;
+    return "1";
 }
 
+string string_to_morse(string s){
+    vector<char> source;
+    for(int i = 0; s[i]; i++){
+        source.push_back(s[i]);
+    }
 
+    string target;
 
+    for(vector<char>::iterator it = source.begin(); it != source.end(); it++){
+        target += char_to_morse(*it);
+    }
+
+    return target;
+}
 
