@@ -29,6 +29,7 @@ string string_to_morse(string s){
 
     for(vector<char>::iterator it = source.begin(); it != source.end(); it++){
         target += char_to_morse(*it);
+        target += " ";
     }
 
     return target;
