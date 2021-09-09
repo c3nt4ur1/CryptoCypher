@@ -10,8 +10,13 @@
  * Code mustn't remain in this function whereas the modules are under development
  */
 
+/*
+ * Next step: Binary conversion
+ */
+
 #include <iostream>
 #include "modules/cesar_cypher.h"
+#include "modules/nano_cypher.h"
 
 using namespace std;
 
