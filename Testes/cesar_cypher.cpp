@@ -6,10 +6,10 @@
 
 vector<char> cesar_encrypt(vector<char> source){
     vector<char>::iterator it = source.begin();
-    char alphabet[52] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+    char alphabet[60] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
                          'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F',
                          'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
-                         'W', 'X', 'Y', 'Z'};
+                         'W', 'X', 'Y', 'Z', ' ', '?', '!', '/', '.', ','};
 
     for(; it < source.end(); it++){
         int j = 0;
@@ -24,10 +24,10 @@ vector<char> cesar_encrypt(vector<char> source){
 
 vector<char> cesar_decrypt(vector<char> source){
     vector<char>::iterator it = source.begin();
-    char alphabet[52] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+    char alphabet[60] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
                          'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F',
                          'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
-                         'W', 'X', 'Y', 'Z'};
+                         'W', 'X', 'Y', 'Z', ' ', '?', '!', '/', '.', ','};
 
     for(; it < source.end(); it++){
         int j = 0;
