@@ -11,4 +11,4 @@ using namespace std;
 vector<char> cesar_encrypt(vector<char> source);
 vector<char> cesar_decrypt(vector<char> source);
 
-#endif //CRYPTOCYPHER_CESAR_CYPHER_H
+#endif
