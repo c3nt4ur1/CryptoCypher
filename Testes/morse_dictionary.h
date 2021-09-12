@@ -32,7 +32,7 @@
 #define y_morse -.--
 #define z_morse --..
 #define dot_morse .-.-.-
-#define !_morse -.-.--
-#define ?_morse ..--..
+#define exclamation_morse -.-.--
+#define question_morse ..--..
 
 #endif //TESTES_MORSE_DICTIONARY_H
